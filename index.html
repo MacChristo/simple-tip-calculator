@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body class="body space-mono-regular">
+
+  <main class="main flex">
+    <img src="/images/logo.svg" alt="logo" class="logo">
+    <div class="container flex">
+      <div class="params flex">
+        <div class="bill-div flex">
+          <!-- TOTAL BILL INPUT -->
+            <div class="label-div flex">
+              <label for = "bill" class="bill-text">Bill</label>
+              <span class="err-msg" id="err-msg-bill"></span>
+            </div>
+          <div class="bill-input flex" id="bill-input">
+            <img src="/images/icon-dollar.svg" alt="avatar" class="avatar">
+            <input type="number" name="bill-amt" min="50" id="bill-amt" class="input space-mono-regular" value="50.55" placeholder="Input total bill here...">
+          </div>
+        </div>
+        <div class="tip-container flex">
+          <!-- FOR THE TIP PERCENTAGES -->
+          <span class="select">Select Tip %</span>
+          <div class="tip-ranges">
+            <input type="button" class="tip-percent space-mono-bold" value="5%"/>
+            <input type="button" class="tip-percent space-mono-bold" value="10%"/>
+            <input type="button" class="tip-percent space-mono-bold" value="15%"/>
+            <input type="button" class="tip-percent space-mono-bold" value="25%"/>
+            <input type="button" class="tip-percent space-mono-bold" value="50%"/>
+            <input type="number" name="Custom" min="1" class="tip-percent space-mono-bold" id="Custom" placeholder="Custom">
+          </div>
+        </div>
+        <div class="num-people flex">
+          <!-- NUMBER OF PEOPLE INPUT -->
+          <div class="label-div flex">
+                      <label for="num-ppl" class="num-text" id="num-text-id">
+            Number of People
+          </label>
+            <span class="err-msg" id="err-msg-ppl"></span>
+          </div>
+          <div class="num-input flex" id="num-input">
+            <img src="/images/icon-person.svg" alt="avatar" class="avatar">
+            <input type="number" name="num-ppl" min="1" value="1" id="num-ppl" class="input space-mono-regular" placeholder="Input number of people here...">
+          </div>
+        </div>
+      </div>
+      <div class="result-container flex">
+        
+        <div class="results flex">
+          <!-- THIS IS THE "TIP AMOUNT" CONTAINER -->
+          <div class="amt-person-div flex">
+          <div class="amt-person flex">
+            <p class="amt">Tip Amount</p>
+            <span class="person">/person</span>
+          </div>
+          <div class="amount flex">
+            <img src="/images/icon-dollar.svg" alt="dollar" class="dollar">
+            <h2 class="amount-figure space-mono-bold" id="tip-person">0.00</h2>
+          </div>
+        </div>
+        <!-- THIS IS THE "TOTAL" CONTAINER -->
+        <div class="ttl-person-div flex">
+          <div class="ttl-person flex">
+            <p class="ttl">Total</p>
+            <span class="person">/person</span>
+          </div>
+          <div class="amount flex">
+            <img src="/images/icon-dollar.svg" alt="dollar" class="dollar">
+            <h2 class="amount-figure space-mono-bold" id="total-person">0.00</h2>
+          </div>
+        </div>
+     </div>
+      <div class="btn-div flex">
+        <button type="button" class="reset-btn space-mono-regular" id="reset">RESET</button>
+        <button type="button" class="reset-btn space-mono-regular" id="calculate">CALCULATE</button>
+      </div>
+
+    </div>
+  </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

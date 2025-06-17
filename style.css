@@ -1,0 +1,244 @@
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* .space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+} */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #c5e4e7;
+    gap: 20px;
+}
+
+.main {
+    flex-direction: column;
+    width: 600px;
+    gap: 20px;
+}
+
+.container {
+    flex-direction: row;
+    width: 100%;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.params {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    gap: 20px;
+}
+
+.bill-div, .num-people, .tip-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.bill-div *, .num-people *, .tip-container * {
+    width: inherit;
+}
+
+.bill-text, .num-text, .select, .err-msg {
+    font-size: .75rem;
+    color: #5e7a7d;
+}
+
+.err-msg {
+        text-align: right;
+    margin-right: 1em;
+}
+
+.err-color{
+    color: red;
+}
+
+.bill-input, .num-input {
+    /* border: 1px solid red; */
+    background-color: #f4fafa;
+    gap: 8px;
+    padding: 0.25em;
+    border-radius: 3.5px;
+}
+
+.input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    color: #00494d;
+}
+
+.input:focus{
+    outline: none;
+}
+.input::placeholder {
+    font-size: 0.5rem;
+}
+
+.avatar {
+    width: 10px;
+}
+
+.tip-ranges {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 10px;
+}
+
+.tip-percent {
+    height: 30px;
+    background-color: #00494d;
+    color: #ffffff;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    border: none;
+    border-radius: 3.5px;
+    cursor: pointer;
+}
+
+.tip-percent:hover {
+    background-color: #9ee8df;
+    color: #00494d;
+}
+
+.tip-percent:focus {
+    outline: none;
+}
+
+.selected-percent {
+    background-color: #25c3ad;
+    color: #00494d;
+}
+
+.result-container {
+    width: 50%;
+    height: 100%;
+    background-color: #00474b;
+    border-radius: 10px;
+    padding: 1.5em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.results {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+}
+
+.amt-person-div, .ttl-person-div {
+    width: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.amt-person, .ttl-person {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    color: #f4fafa;
+}
+.amount {
+    flex-direction: row;
+    gap: 3px;
+}
+
+.amt, .ttl {
+    font-size: .75rem;
+}
+.person {
+    font-size: .5rem;
+    color: #5e7a7d;
+}
+
+.amount-figure {
+    color: #25c3ac;
+    font-size: 1.75rem;
+}
+
+.btn-div {
+    width: 100%;
+    gap: 10px;
+}
+
+
+.reset-btn {
+    width: 100%;
+    border: none;
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    background-color: #26c2ad;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: #9fe8df;
+}
+
+
+@media screen and (max-width: 480px) {
+    .body {
+        height: 90vh;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .main {
+        width: 300px;
+        gap: 15px;
+    }
+
+    .params, .result-container {
+        width: 100%;
+    }
+}
